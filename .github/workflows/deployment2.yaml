@@ -7,9 +7,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: |
-          npm ci
-          npm init @eslint/confi
+        run: npm ci
       - name: Lint code
         run: npm run lint
   test:

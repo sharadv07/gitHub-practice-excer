@@ -1,4 +1,4 @@
-name: Deployment Excer 1
+name: Deployment Exercise 1
 on: push
 jobs:
   deploy:
@@ -6,10 +6,8 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
-      - name: Install dendencies
-        run: |
-          npm ci
-          npm init @eslint/confi
+      - name: Install dependencies
+        run: npm ci
       - name: Lint
         run: npm run lint
       - name: Test code
@@ -17,4 +15,4 @@ jobs:
       - name: Build code
         run: npm run build
       - name: Deploy code
-        run: echo "Code is Deployed....."
+        run: echo "Deploying..."
