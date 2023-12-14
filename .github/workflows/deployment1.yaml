@@ -7,7 +7,9 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dendencies
-        run: npm ci
+        run: |
+          npm ci
+          npm init @eslint/confi
       - name: Lint
         run: npm run lint
       - name: Test code
